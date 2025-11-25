@@ -2,6 +2,7 @@
 #information about the passengers who boarded the unfortunate Titanic
 #ship. Use the Seaborn library to see if we can find any patterns in the data.
 
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
