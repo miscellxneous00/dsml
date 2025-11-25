@@ -96,7 +96,10 @@ def print_tree(node, indent=""):
     if node.is_leaf:
         print(indent + "=> Predict:", node.prediction)
     else:
-        print(indent + "[Root attribute]" if indent=="" else indent + "Attribute: " + node.attribute)
+        if indent == "":
+            print(indent + "[Root attribute: " + node.attribute + "]")
+        else:
+            print(indent + "Attribute: " + node.attribute)
         for val, child in node.children.items():
             print(indent + "  If {} = {}:".format(node.attribute, val))
             print_tree(child, indent + "    ")
